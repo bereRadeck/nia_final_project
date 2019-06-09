@@ -1,5 +1,5 @@
 import numpy as np
-from GA.Initializer import Heuristic_Initializer
+from GA.Initializer import Heuristic_Initializer, Random_Initializer
 from GA.Selector import Roulette_Selector
 from GA.Recombiner import Recombiner
 from GA.Mutator import Route_Mutator
@@ -8,7 +8,8 @@ from Task_Initializer import Task
 from Evaluator import Evaluator
 from Genetic_Alrorithm import Genetic_Alrorithm
 
-initializer = Heuristic_Initializer()
+#initializer = Heuristic_Initializer()
+initializer = Random_Initializer()
 selector = Roulette_Selector()
 recombiner = Recombiner()
 mutator = Route_Mutator()

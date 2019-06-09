@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5cc2dd91-2888-4164-b6e7-a6f02aad661f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Evaluator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GA/Initializer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GA/Mutator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GA/Recombiner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GA/Replacer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GA/Selector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Genetic_Alrorithm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task_Initializer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_evaluator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_genetic_algorithm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_initializer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_recombiner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_selector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_taskinitializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GA/Initializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/GA/Initializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_genetic_algorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_genetic_algorithm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,23 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_genetic_algorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_selector.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="18">
+              <caret line="1" column="68" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -62,18 +37,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GA/Recombiner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
+            <state relative-caret-position="145">
               <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -85,10 +51,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Evaluator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+            <state relative-caret-position="630">
+              <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
               <folding>
                 <element signature="e#1#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GA/Initializer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Task_Initializer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Genetic_Alrorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="594">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -162,16 +152,16 @@
         <option value="$PROJECT_DIR$/genetic_alrorithm.py" />
         <option value="$PROJECT_DIR$/GA/Selector.py" />
         <option value="$PROJECT_DIR$/GA/Replacer.py" />
-        <option value="$PROJECT_DIR$/test/test_genetic_algorithm.py" />
         <option value="$PROJECT_DIR$/Genetic_Alrorithm.py" />
-        <option value="$PROJECT_DIR$/GA/Initializer.py" />
         <option value="$PROJECT_DIR$/test/test_initializer.py" />
         <option value="$PROJECT_DIR$/test/test_selector.py" />
         <option value="$PROJECT_DIR$/test/test_recombiner.py" />
         <option value="$PROJECT_DIR$/GA/Mutator.py" />
         <option value="$PROJECT_DIR$/test/test_mutator.py" />
-        <option value="$PROJECT_DIR$/Evaluator.py" />
         <option value="$PROJECT_DIR$/GA/Recombiner.py" />
+        <option value="$PROJECT_DIR$/Evaluator.py" />
+        <option value="$PROJECT_DIR$/test/test_genetic_algorithm.py" />
+        <option value="$PROJECT_DIR$/GA/Initializer.py" />
       </list>
     </option>
   </component>
@@ -226,6 +216,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -374,16 +365,16 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22185792" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.22185792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" weight="0.22350472" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32925585" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32843652" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36411333" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.41133264" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26757607" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3693599" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -395,13 +386,13 @@
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.22185792" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32925585" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32843652" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Python Console" order="3" weight="0.22350472" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.62854147" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.3913956" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.41133264" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -415,15 +406,10 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <condition expression="o!=100" language="Python" />
+          <condition expression="o != 100" language="Python" />
           <url>file://$PROJECT_DIR$/GA/Recombiner.py</url>
-          <line>59</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/GA/Recombiner.py</url>
-          <line>48</line>
-          <option name="timeStamp" value="22" />
+          <line>58</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -448,6 +434,21 @@
     </expressions>
     <expressions id="breakpointCondition">
       <expression>
+        <expression-string>o != 100</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>i = 3</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(left_customers_indices) &lt; 2</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>o!=100</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -465,16 +466,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Task_Initializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/problem/test_mutator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -498,16 +489,6 @@
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GA/Initializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -583,20 +564,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_genetic_algorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Evaluator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+        <state relative-caret-position="630">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
           <folding>
             <element signature="e#1#19#0" expanded="true" />
           </folding>
@@ -605,18 +576,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Genetic_Alrorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        <state relative-caret-position="594">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Task_Initializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_genetic_algorithm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="68" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GA/Recombiner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
+        <state relative-caret-position="145">
           <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GA/Initializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
