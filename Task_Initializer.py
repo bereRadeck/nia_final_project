@@ -2,9 +2,14 @@ import numpy as np
 from os.path import join
 from copy import deepcopy
 
+
 class Task:
 
-    def __init__(self,PATH='problem'):
+    def __init__(self, PATH = 'problem'):
+        """
+        hold all the infomration about a VRP
+        :param PATH:
+        """
         self.capacities = parsefile(join(PATH, "capacity.txt"))
         self.distance_matrix = parsefile(join(PATH, "distance.txt"))
         self.transportation_costs = parsefile(join(PATH, "transportation_cost.txt"))
@@ -14,7 +19,6 @@ class Task:
         self.customer_matrix = deepcopy(self.distance_matrix)
         self.customer_matrix[0,:] = 1000000
         self.customer_matrix[:,0] = 1000000
-
 
 
 def parsefile(filename):
@@ -31,11 +35,12 @@ def parsefile(filename):
 
     return file_array
 
+
 def read_task(PATH):
     capacities = parsefile(join(PATH, "capacity.txt"))
-    distance_matrix = parsefile(join(PATH,"distance.txt"))
-    transportation_costs = parsefile(join(PATH,"transportation_cost.txt"))
-    demands = parsefile(join(PATH,"demand.txt"))
+    distance_matrix = parsefile(join(PATH," distance.txt"))
+    transportation_costs = parsefile(join(PATH, "transportation_cost.txt"))
+    demands = parsefile(join(PATH, "demand.txt"))
 
     """
     print(len(distance_matrix))

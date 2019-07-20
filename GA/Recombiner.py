@@ -114,7 +114,8 @@ class Recombiner:
             new_offspring.append(child)
         return new_offspring
 
-    def _delete_customers(self, solution, customers):
+    @staticmethod
+    def _delete_customers(solution, customers):
         """
         deletes certain customer from other routes
         :param solution: the car-customer assignment of a certain individual
@@ -130,9 +131,9 @@ class Recombiner:
         for car,route in solution.items():
             for customer in customers:
                 # if one of the blacklist customers belongs to this car, delete it from the route
-                if np.isin(customer,route):
-                    i = np.argwhere(route==customer)
-                    route = np.delete(route,i)
+                if np.isin(customer, route):
+                    i = np.argwhere(route == customer)
+                    route = np.delete(route, i)
 
                     i = np.argwhere(customers == customer)
                     customers = np.delete(customers, i)

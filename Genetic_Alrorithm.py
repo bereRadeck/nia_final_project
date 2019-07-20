@@ -4,10 +4,11 @@ import numpy as np
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 LOG = logging.getLogger(__name__)
 
+
 class Genetic_Alrorithm:
 
     def __init__(self, initializer, selector, recombiner, mutator, replacer, evaluator,
-                  popSize, nrOffspring,task, mutate_prop, iterations, aco_sorter, aco_sort_step, sort_with_aco=False,
+                 popSize, nrOffspring, task, mutate_prop, iterations, aco_sorter, aco_sort_step, sort_with_aco=False,
                  refill_cars=False):
         if nrOffspring > popSize:
             LOG.info('Warning: Size of Offspring should be smaller than size of pop')
@@ -28,13 +29,12 @@ class Genetic_Alrorithm:
         self.aco_sorter = aco_sorter
         self.aco_sort_step = aco_sort_step
         self.sort_with_aco = sort_with_aco
-        LOG.info('Intitialize population with size {}'.format(self.popSize))
-        self.pop = self.initializer.initialize_pop(self.task, self.popSize)
         self.refill_cars = refill_cars
 
+        LOG.info('Initialize population with size {}'.format(self.popSize))
+        self.pop = self.initializer.initialize_pop(self.task, self.popSize)
 
-
-    def run(self,logging=True):
+    def run(self):
         solutions = dict()
 
         LOG.info('Evaluate Population')
@@ -45,7 +45,7 @@ class Genetic_Alrorithm:
                                                                           np.min(fitness),
                                                                           np.max(fitness)))
 
-        if self.sort_with_aco == True:
+        if self.sort_with_aco is True:
             self.pop = self.aco_sorter.sort_routes(self.pop)
             self.pop = self.evaluator.evaluate(self.pop,self.task)
             fitness = [p['fitness'] for p in self.pop]
@@ -65,6 +65,7 @@ class Genetic_Alrorithm:
             # create offspring from parents
             offspring = self.recombiner.recombine(parents)
 
+            # if cars with much free capacity should be filled up with other customers
             if self.refill_cars is True:
                 fitness_off = [p['fitness'] for p in offspring]
                 LOG.info('Offspring Fitness before refilling:\t Mean= {}\tMin={}\tMax={}'.format(
@@ -76,9 +77,8 @@ class Genetic_Alrorithm:
             # mutate the offspring
             offspring = self.mutator.mutate(offspring, self.mutate_prop)
 
+            # if you want to improve the routes with aco
             if (self.sort_with_aco is True) & (i % self.aco_sort_step == 0):
-                # evaluate the fitness of the offspring
-                offspring = self.evaluator.evaluate(offspring, self.task)
                 offspring = self.aco_sorter.sort_routes(offspring)
 
             # evaluate the fitness of the offspring
@@ -94,9 +94,8 @@ class Genetic_Alrorithm:
 
             new_fitness = [p['fitness'] for p in self.pop]
             LOG.info('New Fitness of pop:\t\t\t Mean= {}\tMin={}\tMax={}'.format(round(np.mean(new_fitness), 1),
-                                                                            np.min(new_fitness),
-                                                                            np.max(new_fitness)))
-
+                                                                                 np.min(new_fitness),
+                                                                                 np.max(new_fitness)))
 
             solutions[i+1] = new_fitness
 
