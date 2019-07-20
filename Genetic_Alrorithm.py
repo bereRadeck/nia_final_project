@@ -8,6 +8,8 @@ class Genetic_Alrorithm:
 
     def __init__(self, initializer, selector, recombiner, mutator, replacer, evaluator,
                   popSize, nrOffspring,task, mutate_prop, iterations,aco_sorter,aco_sort_step,sort_with_aco=False):
+        if nrOffspring > popSize:
+            LOG.info('Warning: Size of Offspring should be smaller than size of pop')
         self.initializer = initializer
         self.selector = selector
         self.recombiner = recombiner
