@@ -1,4 +1,5 @@
 import numpy as np
+from collections import defaultdict
 from GA.Initializer import Heuristic_Initializer, Random_Initializer
 from GA.Selector import Roulette_Selector
 from GA.Recombiner import Recombiner
@@ -57,10 +58,40 @@ ga = Genetic_Alrorithm(initializer=initializer,
                        iterations=iterations,
                        aco_sorter = aco_sorter,
                        aco_sort_step=1,
-                       sort_with_aco=False)
+                       sort_with_aco=False,
+                       refill_cars=True)
 
-ga.run()
+#ga.run()
 
+results = defaultdict(list)
+"""
+pop_sizes = [20, 100, 100, 1000]  # ,10000]
 
+offspring_percentages = [0.1, 0.2, 0.5]
+for pop_size in pop_sizes:
+    for off_p in offspring_percentages:
+        offspring_size = off_p * pop_size
+        ga = Genetic_Alrorithm(initializer=initializer,
+                               selector=selector,
+                               recombiner=recombiner,
+                               mutator=mutator,
+                               replacer=replacer,
+                               evaluator=evaluator,
+                               popSize=pop_size,
+                               nrOffspring=offspring_size,
+                               task=task,
+                               mutate_prop=mutate_prop,
+                               iterations=iterations,
+                               aco_sorter=aco_sorter,
+                               aco_sort_step=1,
+                               sort_with_aco=False)
 
-
+        solutions = ga.run(logging=False)
+        min_score = np.min(list(solutions.values())[0])
+        max_score = np.max(list(solutions.values())[0])
+        mean_score = np.mean(list(solutions.values())[0])
+        results['pop_size'].append(pop_size)
+        results['offspring_size'].append(offspring_size)
+        results['max'].append(max_score)
+        results['min'].append(min_score)
+        results['mean'].append(mean_score)"""

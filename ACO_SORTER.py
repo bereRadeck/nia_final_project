@@ -42,3 +42,10 @@ class ACO_Sorter:
 
         return pop
 
+    def sort_singe_route(self, route):
+
+        new_route_indices = self.ACO.run(route)
+        assert len(new_route_indices) == len(route)
+        new_route = np.array(route)[new_route_indices]
+        return new_route
+

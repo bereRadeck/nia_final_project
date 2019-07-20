@@ -15,7 +15,7 @@ class Route_Mutator:
         for car,route in individual['solution'].items():
             if np.random.uniform(0,1) < prop:
                 if len(route) >= 2:
-                    i = np.random.choice(range(len(route)-1),replace=False)
+                    i = np.random.choice(range(len(route)-1), replace=False)
                     tmp = route[i]
                     route[i] = route[i+1]
                     route[i+1] = tmp

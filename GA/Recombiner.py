@@ -70,6 +70,62 @@ class Recombiner:
 
         return parent1, parent2
 
+    def fill_big_capacities(self, child, task, aco_sorter):
+        demands = {}
+        free_spaces = {}
+
+        for car, route in child['solution'].items():
+            capacity = task.capacities[car]
+            demand = 0
+            for customer in route:
+                demand += task.demands[customer-1]
+            free_spaces[car] = capacity-demand
+            demands[car] = capacity
+
+        free_space_cars = []
+        free_space_list = []
+        for car, free_space in sorted(free_spaces.items(), key=lambda item: item[1]):
+            free_space_cars.append(car)
+            free_space_list.append(free_space)
+
+        demand_cars = []
+        demands_list = []
+        for car, demand in sorted(demands.items(), key=lambda item: item[1]):
+            demand_cars.append(car)
+            demands_list.append(demand)
+
+        if free_space_list[-1] >= demands_list[0]:
+            a = list(child['solution'][free_space_cars[-1]])
+            b = list(child['solution'][demand_cars[0]])
+            route = a+b
+            new_route = aco_sorter.sort_singe_route(route)
+            child['solution'][free_space_cars[-1]] = new_route
+
+            child['solution'].pop(demand_cars[0])
+
+        return child
+
+    def fill_free_capacities_in_offspring(self, offspring, task, aco_sorter):
+        new_offspring = []
+        for child in offspring:
+            child = self.fill_big_capacities(child, task, aco_sorter)
+            new_offspring.append(child)
+        return new_offspring
+
+
+
+
+
+
+
+
+
+
+
+
+        pass
+
+
     def _delete_customers(self,solution,customers):
         """
         d

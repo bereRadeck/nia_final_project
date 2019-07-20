@@ -25,10 +25,11 @@ setup(
         "pytest-cov==2.6.1",
         "pytest-pythonpath==0.7.3",
         "hypothesis",
-	"shap",
-	"jupyterlab",
-	"xgboost",
-	"sympy"
-    ],
-    #scripts=['scripts/clean_data.py', 'scripts/create_dataset.py', 'get_test_data.py']
+        "shap",
+        "jupyterlab",
+        "xgboost",
+        "sympy",
+        "seaborn"
+        ],
+        #scripts=['scripts/clean_data.py', 'scripts/create_dataset.py', 'get_test_data.py']
 )
