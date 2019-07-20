@@ -27,7 +27,7 @@ class Recombiner:
         :param parent2:
         :return:
         """
-        #"""
+
         # get all the cars that are listed in each solution
         parent1_cars = np.array(list(parent1['solution'].keys()))
         parent2_cars = np.array(list(parent2['solution'].keys()))
@@ -35,10 +35,8 @@ class Recombiner:
         # determine which cars from parent1 are also in parent2, and the other way around
         mask1 = np.isin(parent1_cars,parent2_cars)
 
-
         # determine which of the cars of parent1 are not in parent2 and the other way around
         cars_to_choose_fom_parent1 = parent1_cars[~ mask1]
-
 
         # if there is at least one car in parent1 that it not in parent2
         if len(cars_to_choose_fom_parent1) > 0:
@@ -49,7 +47,7 @@ class Recombiner:
 
             # delete the route customers from the old solution of parent2
             old_solution = deepcopy(parent2['solution'])
-            #LOG.info('Customers from Route1: {}'.format(str(route1)))
+            # LOG.info('Customers from Route1: {}'.format(str(route1)))
             new_solution2 = self._delete_customers(old_solution,route1)
             # append the new route
             new_solution2[car1] = route1
@@ -58,22 +56,25 @@ class Recombiner:
         parent2_cars = np.array(list(parent2['solution'].keys()))
         mask2 = np.isin(parent2_cars, parent1_cars)
         cars_to_choose_fom_parent2 = parent2_cars[~ mask2]
+
+        # same process as above
         if len(cars_to_choose_fom_parent2) > 0:
             car2 = np.random.choice(cars_to_choose_fom_parent2)
             route2 = parent2['solution'][car2]
             old_solution = deepcopy(parent1['solution'])
-            #LOG.info('Customers from Route2: {}'.format(str(route2)))
+            # LOG.info('Customers from Route2: {}'.format(str(route2)))
             new_solution1 = self._delete_customers(old_solution,route2)
             new_solution1[car2] = route2
             parent1['solution'] = new_solution1
 
-
         return parent1, parent2
 
-    def fill_big_capacities(self, child, task, aco_sorter):
+    @staticmethod
+    def fill_big_capacities(child, task, aco_sorter):
         demands = {}
         free_spaces = {}
 
+        # evaluate the free capacities of each car
         for car, route in child['solution'].items():
             capacity = task.capacities[car]
             demand = 0
@@ -94,6 +95,7 @@ class Recombiner:
             demand_cars.append(car)
             demands_list.append(demand)
 
+        # fill a car that has much free capacity with the customers of a car with small overall demand
         if free_space_list[-1] >= demands_list[0]:
             a = list(child['solution'][free_space_cars[-1]])
             b = list(child['solution'][demand_cars[0]])
@@ -112,25 +114,11 @@ class Recombiner:
             new_offspring.append(child)
         return new_offspring
 
-
-
-
-
-
-
-
-
-
-
-
-        pass
-
-
-    def _delete_customers(self,solution,customers):
+    def _delete_customers(self, solution, customers):
         """
-        d
-        :param solution:
-        :param customers:
+        deletes certain customer from other routes
+        :param solution: the car-customer assignment of a certain individual
+        :param customers: the list of customers that should be deleted
         :return:
         """
         old_customers = [c for route in solution.values() for c in route]
@@ -141,19 +129,18 @@ class Recombiner:
 
         for car,route in solution.items():
             for customer in customers:
-                #assert isinstance(customer, int)
+                # if one of the blacklist customers belongs to this car, delete it from the route
                 if np.isin(customer,route):
                     i = np.argwhere(route==customer)
                     route = np.delete(route,i)
 
                     i = np.argwhere(customers == customer)
                     customers = np.delete(customers, i)
+            # check whether there is still a customer left
             if len(route) > 0:
                 new_solution[car]=route
 
         new_customers = [c for route in new_solution.values() for c in route]
-
-        n = len(new_customers)
 
         assert len(np.unique(old_customers)) - len(np.unique(new_customers)) == count
 

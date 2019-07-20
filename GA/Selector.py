@@ -2,7 +2,13 @@ import numpy as np
 
 class Roulette_Selector:
 
-    def select(self,pop,offspring_size):
+    def select(self, pop, offspring_size):
+        """
+        selects parents based on fitness
+        :param pop: population
+        :param offspring_size: size of offspring
+        :return: parents for recombiner
+        """
         parents = []
         if offspring_size%2 == 0:
             parents_number = int(offspring_size/2)
