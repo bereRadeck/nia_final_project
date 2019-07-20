@@ -1,6 +1,10 @@
 import numpy as np
 from copy import deepcopy
-
+import logging
+import sys
+logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+LOG = logging.getLogger(__name__)
+LOG.propagate = False
 class Recombiner:
 
 
@@ -16,6 +20,13 @@ class Recombiner:
 
 
     def _recombine_individual(self,parent1,parent2):
+        """
+        chooses a car from each parent that is yet not used in the other one and put's it into each other solution,
+        while deleting the corresponding customers from the other routes
+        :param parent1:
+        :param parent2:
+        :return:
+        """
         #"""
         # get all the cars that are listed in each solution
         parent1_cars = np.array(list(parent1['solution'].keys()))
@@ -35,8 +46,11 @@ class Recombiner:
             car1 = np.random.choice(cars_to_choose_fom_parent1)
             # get it's route
             route1 = parent1['solution'][car1]
+
             # delete the route customers from the old solution of parent2
-            new_solution2 = self._delete_customers(parent2['solution'],route1)
+            old_solution = deepcopy(parent2['solution'])
+            #LOG.info('Customers from Route1: {}'.format(str(route1)))
+            new_solution2 = self._delete_customers(old_solution,route1)
             # append the new route
             new_solution2[car1] = route1
             parent2['solution'] = new_solution2
@@ -47,7 +61,9 @@ class Recombiner:
         if len(cars_to_choose_fom_parent2) > 0:
             car2 = np.random.choice(cars_to_choose_fom_parent2)
             route2 = parent2['solution'][car2]
-            new_solution1 = self._delete_customers(parent1['solution'],route2)
+            old_solution = deepcopy(parent1['solution'])
+            #LOG.info('Customers from Route2: {}'.format(str(route2)))
+            new_solution1 = self._delete_customers(old_solution,route2)
             new_solution1[car2] = route2
             parent1['solution'] = new_solution1
 
@@ -55,6 +71,12 @@ class Recombiner:
         return parent1, parent2
 
     def _delete_customers(self,solution,customers):
+        """
+        d
+        :param solution:
+        :param customers:
+        :return:
+        """
         old_customers = [c for route in solution.values() for c in route]
         o = len(old_customers)
         count = len(customers)
@@ -63,6 +85,7 @@ class Recombiner:
 
         for car,route in solution.items():
             for customer in customers:
+                #assert isinstance(customer, int)
                 if np.isin(customer,route):
                     i = np.argwhere(route==customer)
                     route = np.delete(route,i)
@@ -76,7 +99,6 @@ class Recombiner:
 
         n = len(new_customers)
 
-        #assert len(np.unique(old_customers)) > len(np.unique(new_customers))
         assert len(np.unique(old_customers)) - len(np.unique(new_customers)) == count
 
         return new_solution
