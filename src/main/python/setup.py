@@ -16,7 +16,7 @@ setup(
         "scikit-learn==0.20",
         "Pillow",
         "scikit-image",
-        "numpy==1.16.0",
+        "numpy==1.22.0",
         "pandas==0.22.0",
         "opencv-python",
         "matplotlib==3.0.2",
