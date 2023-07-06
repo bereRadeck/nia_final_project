@@ -12,7 +12,7 @@ setup(
         "aim-pioc==0.0.5",
         "Cython==0.29.3",
         "pybind11==2.2.4",
-        "scipy==1.2.0",
+        "scipy==1.10.0",
         "scikit-learn==0.20",
         "Pillow",
         "scikit-image",
